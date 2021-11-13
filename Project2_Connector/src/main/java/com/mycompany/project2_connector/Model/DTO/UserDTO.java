@@ -20,7 +20,7 @@ class UserDTO {
     private String AvatarUrl;
     private RoleDTO role;
 
-    private ArrayList<FeedbackDTO> FeedbackList;
+//    private ArrayList<FeedbackDTO> FeedbackList;
     
     public UserDTO() {
     }
@@ -38,13 +38,13 @@ class UserDTO {
         this.role = role;
     }
 
-    public ArrayList<FeedbackDTO> getFeedbackList() {
-        return FeedbackList;
-    }
-
-    public void setFeedbackList(ArrayList<FeedbackDTO> FeedbackList) {
-        this.FeedbackList = FeedbackList;
-    }
+//    public ArrayList<FeedbackDTO> getFeedbackList() {
+//        return FeedbackList;
+//    }
+//
+//    public void setFeedbackList(ArrayList<FeedbackDTO> FeedbackList) {
+//        this.FeedbackList = FeedbackList;
+//    }
     
     public String getUsername() {
         return Username;
