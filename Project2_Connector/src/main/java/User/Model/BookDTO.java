@@ -5,7 +5,6 @@
  */
 package User.Model;
 
-
 import java.sql.Blob;
 
 import java.time.Year;
@@ -15,6 +14,7 @@ import java.time.Year;
  * @author Do_Do
  */
 public class BookDTO {
+
     private int BookId;
     private String BookName;
     private String Type;
@@ -26,6 +26,9 @@ public class BookDTO {
 
     private CategoryDTO category;
     private AuthorDTO Author;
+
+    public BookDTO() {
+    }
 
     public BookDTO(int BookId, String BookName, String Type, Year ReleaseDate, Blob PosterUrl, Blob BookUrl, Blob AvatarUrl, int CategoryId, CategoryDTO category, AuthorDTO Author) {
         this.BookId = BookId;
@@ -51,8 +54,7 @@ public class BookDTO {
         this.category = category;
         this.Author = Author;
     }
-    
-    
+
     public int getBookId() {
         return BookId;
     }
@@ -60,7 +62,7 @@ public class BookDTO {
     public AuthorDTO getAuthor() {
         return Author;
     }
-    
+
     public String getBookName() {
         return BookName;
     }
@@ -96,5 +98,47 @@ public class BookDTO {
     public CategoryDTO getCategory() {
         return category;
     }
+
+    public void setBookId(int BookId) {
+        this.BookId = BookId;
+    }
+
+    public void setBookName(String BookName) {
+        this.BookName = BookName;
+    }
+
+    public void setType(String Type) {
+        this.Type = Type;
+    }
+
+    public void setReleaseDate(Year ReleaseDate) {
+        this.ReleaseDate = ReleaseDate;
+    }
+
+    public void setPosterUrl(Blob PosterUrl) {
+        this.PosterUrl = PosterUrl;
+    }
+
+    public void setBookUrl(Blob BookUrl) {
+        this.BookUrl = BookUrl;
+    }
+
+    public void setAvatarUrl(Blob AvatarUrl) {
+        this.AvatarUrl = AvatarUrl;
+    }
+
+    public void setCategoryId(int CategoryId) {
+        this.CategoryId = CategoryId;
+    }
+
+    public void setCategory(CategoryDTO category) {
+        this.category = category;
+    }
+
+    public void setAuthor(AuthorDTO Author) {
+        this.Author = Author;
+    }
+
+    
     
 }

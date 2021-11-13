@@ -28,6 +28,7 @@ import javax.persistence.TemporalType;
 @Table(name = "user", catalog = "readbook", schema = "")
 @NamedQueries({
     @NamedQuery(name = "User.findAll", query = "SELECT u FROM User u"),
+    @NamedQuery(name = "User.login", query = "SELECT u FROM User u WHERE u.userName = :userName and u.passWord = :passWord"),
     @NamedQuery(name = "User.findByUserId", query = "SELECT u FROM User u WHERE u.userId = :userId"),
     @NamedQuery(name = "User.findByUserName", query = "SELECT u FROM User u WHERE u.userName = :userName"),
     @NamedQuery(name = "User.findByPassWord", query = "SELECT u FROM User u WHERE u.passWord = :passWord"),

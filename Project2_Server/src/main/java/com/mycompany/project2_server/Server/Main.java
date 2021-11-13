@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 public class Main {
     public static void main(String[] args)  {
         try {
-            TinhToan tinhToan = new TinhToan();
+            API_Controller tinhToan = new API_Controller();
             LocateRegistry.createRegistry(7898);
             Naming.rebind("rmi://localhost:7898/tinhtong", tinhToan);
             System.out.println("da chay rmi tinh toan");

@@ -5,6 +5,7 @@
  */
 package Admin.InterfaceAdmin;
 
+import User.Model.BookDTO;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
@@ -13,5 +14,10 @@ import java.rmi.RemoteException;
  * @author Do_Do
  */
 public interface TinhTong extends Remote {
+
     int tinhTong(int a, int b) throws RemoteException;
+
+    boolean login(String username, String pass) throws RemoteException;
+
+    BookDTO addNewbook(BookDTO dTO) throws RemoteException;// add thanh cong tra ve bookdto, that bai tra ve null
 }

@@ -26,6 +26,8 @@ public class TestClient {
 
             int tong = tinhTong.tinhTong(344, 444);
             System.out.println("ket qua: " + tong);
+            
+//            tinhTong.login(username, pass)
         } catch (NotBoundException | MalformedURLException | RemoteException ex) {
             Logger.getLogger(TestClient.class.getName()).log(Level.SEVERE, null, ex);
         }
