@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Admin.Model.AdminDTO;
+package com.mycompany.project2_connector.Model.DTO;
 
+import java.sql.Blob;
 
-
+import com.mycompany.project2_connector.Admin.Model.AdminDTO.*;
 import java.sql.Blob;
 import java.time.Year;
 
@@ -15,6 +16,7 @@ import java.time.Year;
  * @author Do_Do
  */
 public class BookDTO {
+
     private int BookId;
     private String BookName;
     private String Type;
@@ -22,12 +24,44 @@ public class BookDTO {
     private Blob PosterUrl;
     private Blob BookUrl;
     private Blob AvatarUrl;
-    private int CategoryId;
-    private int AuthorId;
-    
+    private CategoryDTO Category;
+    private AuthorDTO Author;
+
+    public BookDTO() {
+    }
+
+    public BookDTO(int BookId, String BookName, String Type, Year ReleaseDate, Blob PosterUrl, Blob BookUrl, Blob AvatarUrl, int CategoryId, CategoryDTO category, AuthorDTO Author) {
+        this.BookId = BookId;
+        this.BookName = BookName;
+        this.Type = Type;
+        this.ReleaseDate = ReleaseDate;
+        this.PosterUrl = PosterUrl;
+        this.BookUrl = BookUrl;
+        this.AvatarUrl = AvatarUrl;
+        this.Category = Category;
+        this.Author = Author;
+    }
+
+    public BookDTO(String BookName, String Type, Year ReleaseDate, Blob PosterUrl, Blob BookUrl, Blob AvatarUrl, int CategoryId, CategoryDTO category, AuthorDTO Author) {
+        this.BookName = BookName;
+        this.Type = Type;
+        this.ReleaseDate = ReleaseDate;
+        this.PosterUrl = PosterUrl;
+        this.BookUrl = BookUrl;
+        this.AvatarUrl = AvatarUrl;
+        this.CategoryId = CategoryId;
+        this.category = category;
+        this.Author = Author;
+    }
+
     public int getBookId() {
         return BookId;
     }
+
+    public AuthorDTO getAuthor() {
+        return Author;
+    }
+
     public String getBookName() {
         return BookName;
     }
@@ -52,10 +86,11 @@ public class BookDTO {
         return AvatarUrl;
     }
 
-    public int getCategoryId() {
-        return CategoryId;
+    public CategoryDTO getCategory() {
+        return Category;
     }
 
+   
     public void setBookId(int BookId) {
         this.BookId = BookId;
     }
@@ -84,11 +119,15 @@ public class BookDTO {
         this.AvatarUrl = AvatarUrl;
     }
 
-    public void setCategoryId(int CategoryId) {
-        this.CategoryId = CategoryId;
+    public void setAuthor(AuthorDTO Author) {
+        this.Author = Author;
     }
 
-    public void setAuthorId(int AuthorId) {
-        this.AuthorId = AuthorId;
+    public void setCategory(CategoryDTO Category) {
+        this.Category = Category;
     }
+
+
+    
+    
 }

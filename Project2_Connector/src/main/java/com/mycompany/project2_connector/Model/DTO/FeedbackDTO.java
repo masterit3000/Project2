@@ -6,6 +6,7 @@
 package User.Model;
 
 
+import com.mycompany.project2_connector.Admin.Model.AdminDTO.*;
 import java.sql.Date;
 
 /**
@@ -14,47 +15,52 @@ import java.sql.Date;
  */
 public class FeedbackDTO {
     private int FeedBackId;
-    private int UserId;
+    private UserDTO user;
     private Date FeedBackDate;
     private String Content;
 
-    public FeedbackDTO(int FeedBackId, int UserId, Date FeedBackDate, String Content) {
+    public FeedbackDTO() {
+    }
+
+    public FeedbackDTO(int FeedBackId, UserDTO user, Date FeedBackDate, String Content) {
         this.FeedBackId = FeedBackId;
-        this.UserId = UserId;
+        this.user = user;
         this.FeedBackDate = FeedBackDate;
         this.Content = Content;
-    }
-
-    public int getFeedBackId() {
-        return FeedBackId;
-    }
-
-    public int getUserId() {
-        return UserId;
-    }
-
-    public Date getFeedBackDate() {
-        return FeedBackDate;
     }
 
     public String getContent() {
         return Content;
     }
 
-    public void setFeedBackId(int FeedBackId) {
-        this.FeedBackId = FeedBackId;
+    public Date getFeedBackDate() {
+        return FeedBackDate;
     }
 
-    public void setUserId(int UserId) {
-        this.UserId = UserId;
+    public int getFeedBackId() {
+        return FeedBackId;
+    }
+
+    public UserDTO getUser() {
+        return user;
+    }
+
+    public void setContent(String Content) {
+        this.Content = Content;
     }
 
     public void setFeedBackDate(Date FeedBackDate) {
         this.FeedBackDate = FeedBackDate;
     }
 
-    public void setContent(String Content) {
-        this.Content = Content;
+    public void setFeedBackId(int FeedBackId) {
+        this.FeedBackId = FeedBackId;
     }
+
+    public void setUser(UserDTO user) {
+        this.user = user;
+    }
+
+   
     
 }
